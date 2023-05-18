@@ -50,3 +50,145 @@ table {
 
 
 /* Write your css below here */
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template: "head" 120px "main" 2fr "aside" 1fr "foot" 100px / 1fr;
+}
+
+p {
+    line-height: 20px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: #282835;
+    font-size: larger;
+	margin-bottom: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+aside a {
+    color: #000;
+    letter-spacing: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+header a {
+    color: #f6f6fa;
+    margin-top: 5px;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #fff;
+    grid-area: main;
+    padding: 16px;
+    text-align: justify;
+}
+
+main p{
+    line-height: 25px;
+}
+
+header {
+    background-color: #282a35;
+    grid-area: head;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    display: none;
+}
+
+aside {
+    background-color: #e7e9eb;
+    grid-area: aside;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+aside p{
+    line-height: 25px;
+}
+
+footer {
+    background: linear-gradient(#282a35, #282b35);
+    grid-area: foot;  
+    opacity: 0.9;
+    text-align: center;
+    color: #e7e9eb;
+    
+}
+
+footer h3{
+    color: #f1f1eb;
+    padding-top: 20px;
+	margin: auto;
+}
+
+a:hover {
+    color: aqua;
+}
+
+/* Responsive Layout */
+
+@media (width >= 768px) {
+    .container {
+        grid-template: "head head" 100px "aside main" 1fr "foot foot" 100px / 200px 1fr;
+    }
+
+
+    header {
+        justify-content: space-between;
+    }
+
+    header img {
+        display: block;
+        margin-left: 20px;
+    }
+
+    header nav {
+        flex-flow: row wrap;
+        align-self: center;
+        margin-right: 50px;
+        font-size: 20px;
+        justify-content: center;
+    }
+}
+
+@media (width >= 992px) {
+    .container {
+		grid-template: 100px minmax(100px 150px) 100px / 300px 1fr;
+        grid-template-areas:
+            "head head"
+            "aside main"
+            "foot foot";
+    }     
+}
