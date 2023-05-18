@@ -92,7 +92,7 @@ header a {
     margin-top: 5px;
     justify-content: space-between;
     padding: 10px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -108,6 +108,10 @@ main {
     grid-area: main;
     padding: 16px;
     text-align: justify;
+}
+
+main p{
+    line-height: 25px;
 }
 
 header {
@@ -129,6 +133,9 @@ aside {
     display: flex;
     flex-direction: column;
     padding: 15px;
+}
+aside p{
+    line-height: 25px;
 }
 
 footer {
